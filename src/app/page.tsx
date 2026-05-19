@@ -368,16 +368,16 @@ function ApplicationsSection() {
       </div>
 
       <div className="border-t border-b border-zinc-200">
-        <div className="grid grid-cols-3 md:grid-cols-6">
+        <div className="grid grid-cols-2 md:grid-cols-6">
           {applications.map((app, i) => {
             const Icon = app.icon
             return (
               <div
                 key={app.name}
                 className={`flex flex-col items-center justify-center px-3 py-8 text-center
-                  ${i % 3 !== 0 ? "border-l border-zinc-200" : ""}
+                  ${i % 2 !== 0 ? "border-l border-zinc-200" : ""}
                   md:border-l md:border-zinc-200
-                  ${i >= 3 ? "border-t border-zinc-200 md:border-t-0" : ""}
+                  ${i >= 2 ? "border-t border-zinc-200 md:border-t-0" : ""}
                 `}
               >
                 <Icon className="mb-3 size-5 text-[#1a3a6b]" />
