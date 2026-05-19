@@ -436,7 +436,7 @@ function Footer() {
   return (
     <footer className="mt-auto border-t border-zinc-200 bg-white px-6 py-10 lg:px-10">
       <div className="mx-auto max-w-[1400px]">
-        <div className="grid gap-8 md:grid-cols-4">
+        <div className="grid gap-8 md:grid-cols-3">
           <div className="space-y-3 md:col-span-2">
             <div className="flex items-center gap-3">
               <img
@@ -463,21 +463,6 @@ function Footer() {
               </a>
               <span>info@shivapigmentindia.com</span>
             </div>
-          </div>
-
-          <div className="space-y-3">
-            <h4 className="text-xs font-semibold uppercase tracking-wider text-[#1a3a6b]">
-              Quick Links
-            </h4>
-            {["Products", "Applications", "About", "Contact"].map((link) => (
-              <a
-                key={link}
-                href="#"
-                className="block text-xs text-zinc-500 transition-colors hover:text-[#1a3a6b]"
-              >
-                {link}
-              </a>
-            ))}
           </div>
 
           <div className="space-y-3">
