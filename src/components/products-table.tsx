@@ -46,14 +46,14 @@ const columns = [
     header: "C.I. Number",
     enableSorting: true,
     cell: ({ getValue }) => (
-      <span className="font-mono text-xs text-zinc-500">{getValue()}</span>
+      <span className="font-mono text-sm font-medium text-zinc-700">{getValue()}</span>
     ),
   }),
   columnHelper.accessor("description", {
     header: "Description",
     enableSorting: false,
     cell: ({ getValue }) => (
-      <span className="text-xs text-zinc-500">{getValue()}</span>
+      <span className="text-sm font-medium text-zinc-700">{getValue()}</span>
     ),
   }),
   columnHelper.accessor("applications", {
