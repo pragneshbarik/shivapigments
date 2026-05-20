@@ -29,35 +29,35 @@ const stats = [
 
 const products = [
   {
-    name: "Phthalocyanine Alpha Blue",
+    name: "Phthalocyanine Pigment Blue",
     grade: "PB 15:0 / 74160",
     description: "High-quality alpha form for offset ink and paint applications",
     swatch: "from-[#1e4d8c] to-[#3068b0]",
     applications: ["Offset Ink", "Paint"],
   },
   {
-    name: "Phthalocyanine Alpha Blue",
+    name: "Phthalocyanine Pigment Blue",
     grade: "PB 15:0 / 74160",
     description: "Specialised grade for water base texture coatings",
     swatch: "from-[#124578] to-[#1e6bb0]",
     applications: ["Water Base Texture"],
   },
   {
-    name: "Phthalocyanine Alpha Blue",
+    name: "Phthalocyanine Pigment Blue",
     grade: "PB 15:0 / 74160",
     description: "Universal grade for plastics and rubber industries",
     swatch: "from-[#163d73] to-[#2359a0]",
     applications: ["Plastics", "Rubber"],
   },
   {
-    name: "Phthalocyanine Alpha Blue",
+    name: "Phthalocyanine Pigment Blue",
     grade: "PB 15:1 / 74160",
     description: "Heat-stable grade engineered for plastic applications",
     swatch: "from-[#0f3b6e] to-[#1a5fa8]",
     applications: ["Plastics"],
   },
   {
-    name: "Phthalocyanine Alpha Blue",
+    name: "Phthalocyanine Pigment Blue",
     grade: "PB 15:1 / 74160",
     description: "Premium grade formulated for alkyd paint systems",
     swatch: "from-[#1a3a6b] to-[#2a5a9b]",
