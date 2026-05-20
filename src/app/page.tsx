@@ -124,20 +124,26 @@ const aboutSlides = [
   {
     title: "Manufacturing Excellence",
     subtitle: "Reliable pigment production backed by disciplined process control.",
-    image: "/pawel-czerwinski-g0eRErPBoTA-unsplash.jpg",
+    image: "https://unsplash.com/photos/BBQ15BncPCc/download?force=true&w=1400",
     position: "object-center",
   },
   {
     title: "Global Supply Focus",
     subtitle: "Built to support domestic and export customers with prompt response.",
-    image: "/pawel-czerwinski-g0eRErPBoTA-unsplash.jpg",
-    position: "object-left",
+    image: "https://unsplash.com/photos/_YLzw4aqvIY/download?force=true&w=1400",
+    position: "object-center",
   },
   {
     title: "Consistent Product Quality",
     subtitle: "Developed for inks, coatings, plastics, and industrial applications.",
-    image: "/pawel-czerwinski-g0eRErPBoTA-unsplash.jpg",
+    image: "https://unsplash.com/photos/V6T99SnUCyA/download?force=true&w=1400",
     position: "object-right",
+  },
+  {
+    title: "People Behind the Process",
+    subtitle: "Built on skilled teams, dependable service, and long-term customer trust.",
+    image: "https://unsplash.com/photos/CVUiWE_Yj40/download?force=true&w=1400",
+    position: "object-center",
   },
 ]
 
