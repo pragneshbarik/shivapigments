@@ -68,7 +68,7 @@ const products = [
     grade: "PB 15:3 / 74160",
     description: "Beta crystal form for solvent inks & industrial coatings",
     swatch: "from-[#124578] to-[#1e6bb0]",
-    applications: ["Solvent Ink", "Coatings"],
+    applications: ["Solvent Ink", "Coatings", "Plastics"],
   },
   {
     name: "Phthalocyanine Green",

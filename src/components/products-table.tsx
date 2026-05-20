@@ -60,11 +60,11 @@ const columns = [
     header: "Applications",
     enableSorting: false,
     cell: ({ getValue }) => (
-      <div className="flex flex-wrap gap-1">
+      <div className="flex flex-wrap gap-2.5">
         {getValue().map((app) => (
           <span
             key={app}
-            className="rounded-full bg-zinc-100 px-2 py-0.5 text-[10px] font-medium text-zinc-600"
+            className="rounded-full bg-zinc-100 px-3.5 py-1.5 text-sm font-medium text-zinc-700"
           >
             {app}
           </span>
