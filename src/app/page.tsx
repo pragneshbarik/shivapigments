@@ -145,7 +145,7 @@ function Header() {
       </div>
 
       <a
-        href="mailto:sales@shivapigmentindia.com"
+        href="mailto:sales@shivapigments.com"
         className="inline-flex h-9 items-center gap-2 rounded-full bg-[#1a3a6b] px-5 text-xs font-medium text-white shadow-sm transition-colors hover:bg-[#0f2340]"
       >
         <Envelope className="size-4" />
@@ -415,7 +415,7 @@ function CtaSection() {
           </div>
           <div className="flex flex-col items-center gap-3 md:items-end">
             <a
-              href="mailto:sales@shivapigmentindia.com"
+              href="mailto:sales@shivapigments.com"
               className="inline-flex h-12 items-center justify-center gap-2 rounded-full bg-white px-8 text-sm font-medium text-[#1a3a6b] shadow-sm transition-colors hover:bg-zinc-100"
             >
               <Envelope className="size-4" />
@@ -461,7 +461,7 @@ function Footer() {
               >
                 <LinkedinLogo className="size-4" />
               </a>
-              <span>info@shivapigmentindia.com</span>
+              <span>info@shivapigments.com</span>
             </div>
           </div>
 
@@ -484,8 +484,8 @@ function Footer() {
                 <Phone className="size-3 text-[#1a3a6b]" />
                 <span className="text-[#1a3a6b]">+91 98242 11670</span>
               </div>
-              <p className="pt-1">info@shivapigmentindia.com</p>
-              <p>sales@shivapigmentindia.com</p>
+              <p className="pt-1">info@shivapigments.com</p>
+              <p>sales@shivapigments.com</p>
             </div>
           </div>
         </div>
