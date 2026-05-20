@@ -1,6 +1,6 @@
 "use client"
 
-import { Button } from "@/components/ui/button"
+import { useEffect, useState } from "react"
 import {
   ArrowDown,
   Envelope,
@@ -118,6 +118,27 @@ const whyChooseUs = [
   "Competitive pricing backed by cost-efficient manufacturing",
   "Prompt response with technical data and competitive quotes",
   "Custom product development support for new ventures",
+]
+
+const aboutSlides = [
+  {
+    title: "Manufacturing Excellence",
+    subtitle: "Reliable pigment production backed by disciplined process control.",
+    image: "/pawel-czerwinski-g0eRErPBoTA-unsplash.jpg",
+    position: "object-center",
+  },
+  {
+    title: "Global Supply Focus",
+    subtitle: "Built to support domestic and export customers with prompt response.",
+    image: "/pawel-czerwinski-g0eRErPBoTA-unsplash.jpg",
+    position: "object-left",
+  },
+  {
+    title: "Consistent Product Quality",
+    subtitle: "Developed for inks, coatings, plastics, and industrial applications.",
+    image: "/pawel-czerwinski-g0eRErPBoTA-unsplash.jpg",
+    position: "object-right",
+  },
 ]
 
 /* ─── Components ─── */
@@ -256,34 +277,94 @@ function StatsSection() {
 }
 
 function AboutSection() {
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % aboutSlides.length)
+    }, 3500)
+
+    return () => window.clearInterval(interval)
+  }, [])
+
   return (
     <section className="px-4 py-16 lg:px-6">
-      <div className="mx-auto max-w-[1400px] space-y-5">
-        <p
-          className="text-sm italic text-[#1a3a6b]/70"
-          style={{ fontFamily: "var(--font-playfair), serif" }}
-        >
-          About Us
-        </p>
-        <h2
-          className="text-3xl font-normal leading-tight tracking-tight text-[#1a3a6b] md:text-4xl"
-          style={{ fontFamily: "var(--font-playfair), serif" }}
-        >
-          Your Trusted Partner in Phthalocyanine Pigments
-        </h2>
-        <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-zinc-600">
-          <p>
-            Pigment Group is a well-established Indian group engaged in the
-            manufacturing, marketing and export of pigments. Shiva Pigments has
-            gained complete trust from customers across India and overseas.
+      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,520px)] lg:items-center">
+        <div className="space-y-5">
+          <p
+            className="text-sm italic text-[#1a3a6b]/70"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            About Us
           </p>
-          <p>
-            We stand on the strong pillars of three group companies, backed by
-            efficient manpower and a team of technical professionals. Our
-            strength stems from dedication, commitment, prompt feedback, price
-            competitiveness, and strict quality control with comprehensive
-            product coverage across various industries.
-          </p>
+          <h2
+            className="text-3xl font-normal leading-tight tracking-tight text-[#1a3a6b] md:text-4xl"
+            style={{ fontFamily: "var(--font-playfair), serif" }}
+          >
+            Your Trusted Partner in Phthalocyanine Pigments
+          </h2>
+          <div className="max-w-3xl space-y-4 text-sm leading-relaxed text-zinc-600">
+            <p>
+              Pigment Group is a well-established Indian group engaged in the
+              manufacturing, marketing and export of pigments. Shiva Pigments has
+              gained complete trust from customers across India and overseas.
+            </p>
+            <p>
+              We stand on the strong pillars of three group companies, backed by
+              efficient manpower and a team of technical professionals. Our
+              strength stems from dedication, commitment, prompt feedback, price
+              competitiveness, and strict quality control with comprehensive
+              product coverage across various industries.
+            </p>
+          </div>
+        </div>
+
+        <div className="relative overflow-hidden rounded-[2rem] bg-[#0f2340] shadow-[0_30px_80px_rgba(15,35,64,0.18)]">
+          <div className="relative aspect-[4/4.2] sm:aspect-[4/3.6]">
+            {aboutSlides.map((slide, index) => (
+              <div
+                key={slide.title}
+                className={`absolute inset-0 transition-opacity duration-700 ${
+                  index === activeSlide ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className={`h-full w-full ${slide.position} object-cover`}
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0f2340] via-[#0f2340]/45 to-[#0f2340]/10" />
+                <div className="absolute inset-x-0 bottom-0 space-y-2 p-6 text-white sm:p-8">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-white/65">
+                    About Shiva Pigments
+                  </p>
+                  <h3
+                    className="text-2xl font-normal leading-tight sm:text-[2rem]"
+                    style={{ fontFamily: "var(--font-playfair), serif" }}
+                  >
+                    {slide.title}
+                  </h3>
+                  <p className="max-w-md text-sm leading-relaxed text-white/75 sm:text-base">
+                    {slide.subtitle}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute bottom-6 right-6 z-10 flex items-center gap-2 rounded-full bg-white/12 px-3 py-2 backdrop-blur-md">
+            {aboutSlides.map((slide, index) => (
+              <button
+                key={slide.title}
+                type="button"
+                onClick={() => setActiveSlide(index)}
+                aria-label={`Show slide ${index + 1}`}
+                className={`h-2.5 rounded-full transition-all ${
+                  index === activeSlide ? "w-8 bg-white" : "w-2.5 bg-white/45"
+                }`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
