@@ -72,7 +72,7 @@ const products = [
   },
   {
     name: "Phthalocyanine Green",
-    grade: "PG 7",
+    grade: "PG 7 / 74260",
     description: "High-strength green pigment for inks, coatings & plastics",
     swatch: "from-[#1a6b3a] to-[#2a9b5a]",
     applications: ["Inks", "Coatings", "Plastics"],
