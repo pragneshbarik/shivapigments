@@ -64,7 +64,7 @@ const products = [
     applications: ["Alkyd Paint"],
   },
   {
-    name: "Phthalocyanine Beta Blue",
+    name: "Phthalocyanine Pigment Blue",
     grade: "PB 15:3 / 74160",
     description: "Beta crystal form for solvent inks & industrial coatings",
     swatch: "from-[#124578] to-[#1e6bb0]",
