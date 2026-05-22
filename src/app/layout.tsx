@@ -22,6 +22,28 @@ export const metadata: Metadata = {
   title: "Shiva Pigments Private Limited",
   description:
     "Manufacturers and Exporters of Premium Phthalocyanine Blue Pigments — PB 15:0, PB 15:1 & Copper Phthalocyanine Crude",
+  icons: {
+    icon: "/logo.png",
+    shortcut: "/logo.png",
+    apple: "/logo.png",
+  },
+  openGraph: {
+    title: "Shiva Pigments Private Limited",
+    description:
+      "Manufacturers and Exporters of Premium Phthalocyanine Blue Pigments — PB 15:0, PB 15:1 & Copper Phthalocyanine Crude",
+    images: [
+      {
+        url: "/opengraph.png",
+      },
+    ],
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "Shiva Pigments Private Limited",
+    description:
+      "Manufacturers and Exporters of Premium Phthalocyanine Blue Pigments — PB 15:0, PB 15:1 & Copper Phthalocyanine Crude",
+    images: ["/opengraph.png"],
+  },
 };
 
 export default function RootLayout({
