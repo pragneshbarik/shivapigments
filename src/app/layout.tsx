@@ -19,9 +19,21 @@ const playfair = Playfair_Display({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL("https://shivapigments.com"),
   title: "Shiva Pigments Private Limited",
   description:
     "Manufacturers and Exporters of Premium Phthalocyanine Blue Pigments — PB 15:0, PB 15:1 & Copper Phthalocyanine Crude",
+  alternates: {
+    canonical: "/",
+  },
+  robots: {
+    index: true,
+    follow: true,
+    googleBot: {
+      index: true,
+      follow: true,
+    },
+  },
   icons: {
     icon: "/logo.png",
     shortcut: "/logo.png",
