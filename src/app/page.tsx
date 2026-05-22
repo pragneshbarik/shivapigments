@@ -541,14 +541,18 @@ function Footer() {
               grades for Offset Ink, Paint, Water Base Texture, Plastics,
               Rubber & Alkyd Paint.
             </p>
-            <div className="flex items-center gap-3 text-xs text-zinc-400">
+            <div className="flex flex-wrap items-center gap-3 pt-1">
               <a
-                href="#"
-                className="transition-colors hover:text-[#1a3a6b]"
+                href="https://www.linkedin.com/company/shiva-pigment-private-limited/"
+                target="_blank"
+                rel="noreferrer"
+                aria-label="Visit Shiva Pigments on LinkedIn"
+                className="inline-flex items-center gap-2 rounded-full border border-zinc-200 bg-zinc-50 px-4 py-2 text-sm font-medium text-[#1a3a6b] transition-colors hover:border-[#1a3a6b]/30 hover:bg-[#1a3a6b]/5"
               >
-                <LinkedinLogo className="size-4" />
+                <LinkedinLogo className="size-6" weight="fill" />
+                <span>Follow on LinkedIn</span>
               </a>
-              <span>info@shivapigments.com</span>
+              <span className="text-xs text-zinc-400">info@shivapigments.com</span>
             </div>
           </div>
 
