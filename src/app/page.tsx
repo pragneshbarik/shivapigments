@@ -408,9 +408,9 @@ function WhyChooseSection() {
         </div>
 
         <div className="flex justify-center lg:justify-end">
-          <div className="w-full max-w-2xl rounded-[2rem] bg-[#f4f7fb] p-4 shadow-[0_24px_60px_rgba(15,35,64,0.08)] sm:p-6">
+          <div className="w-full max-w-3xl">
             <img
-              src="/why-shiva-map.jpg"
+              src="/why-shiva-map.png"
               alt="World map showing Shiva Pigments' global reach"
               className="mx-auto h-auto w-full object-contain"
             />
