@@ -380,29 +380,41 @@ function AboutSection() {
 function WhyChooseSection() {
   return (
     <section className="px-4 py-16 lg:px-6">
-      <div className="mx-auto max-w-[1400px]">
-        <div className="mb-10">
-          <p
-            className="text-sm italic text-[#1a3a6b]/70"
-            style={{ fontFamily: "var(--font-playfair), serif" }}
-          >
-            Our Strengths
-          </p>
-          <h2
-            className="text-3xl font-normal tracking-tight text-[#1a3a6b] md:text-4xl"
-            style={{ fontFamily: "var(--font-playfair), serif" }}
-          >
-            Why Shiva Pigments?
-          </h2>
+      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[minmax(0,0.9fr)_minmax(320px,1.1fr)] lg:items-center">
+        <div>
+          <div className="mb-10">
+            <p
+              className="text-sm italic text-[#1a3a6b]/70"
+              style={{ fontFamily: "var(--font-playfair), serif" }}
+            >
+              Our Strengths
+            </p>
+            <h2
+              className="text-3xl font-normal tracking-tight text-[#1a3a6b] md:text-4xl"
+              style={{ fontFamily: "var(--font-playfair), serif" }}
+            >
+              Why Shiva Pigments?
+            </h2>
+          </div>
+
+          <div className="flex flex-col gap-4">
+            {whyChooseUs.map((item, i) => (
+              <div key={i} className="flex items-center gap-3">
+                <span className="text-lg text-[#1a3a6b] shrink-0">•</span>
+                <p className="text-sm text-zinc-600">{item}</p>
+              </div>
+            ))}
+          </div>
         </div>
 
-        <div className="flex flex-col gap-4">
-          {whyChooseUs.map((item, i) => (
-            <div key={i} className="flex items-center gap-3">
-              <span className="text-lg text-[#1a3a6b] shrink-0">•</span>
-              <p className="text-sm text-zinc-600">{item}</p>
-            </div>
-          ))}
+        <div className="flex justify-center lg:justify-end">
+          <div className="w-full max-w-2xl rounded-[2rem] bg-[#f4f7fb] p-4 shadow-[0_24px_60px_rgba(15,35,64,0.08)] sm:p-6">
+            <img
+              src="/why-shiva-map.jpg"
+              alt="World map showing Shiva Pigments' global reach"
+              className="mx-auto h-auto w-full object-contain"
+            />
+          </div>
         </div>
       </div>
     </section>
