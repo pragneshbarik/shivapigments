@@ -573,7 +573,7 @@ function Footer() {
               </div>
               <div className="flex items-center gap-1.5">
                 <Phone className="size-3 text-[#1a3a6b]" />
-                <span className="text-[#1a3a6b]">+91 98242 11670</span>
+                <span className="text-[#1a3a6b]">+91 98240 11670</span>
               </div>
               <p className="pt-1">info@shivapigments.com</p>
               <p>sales@shivapigments.com</p>
