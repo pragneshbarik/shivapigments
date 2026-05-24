@@ -114,6 +114,14 @@ const applications = [
 
 const spotlightSlides = [
   {
+    eyebrow: "Color Flow Detail",
+    title: "Bold pigment movement in a cleaner wide frame",
+    description:
+      "A sharper rectangular crop that keeps the original texture clear inside the downside carousel.",
+    image: "/spotlight-carousel-4.jpg",
+    imageClass: "object-contain bg-[#0f2340] p-3 sm:p-4",
+  },
+  {
     eyebrow: "Offset & Packaging",
     title: "Strong dispersion for high-speed print runs",
     description:
@@ -121,11 +129,18 @@ const spotlightSlides = [
     image: "/product-carousel-1.jpg",
   },
   {
+    eyebrow: "Studio Color Work",
+    title: "Smooth pigment blending for creative finishing",
+    description:
+      "A clean, balanced surface for showcasing color mixing, formulation, and finish quality.",
+    image: "/spotlight-carousel-3.jpg",
+  },
+  {
     eyebrow: "Coatings & Paint",
     title: "Stable performance across industrial coatings",
     description:
       "Built for decorative and industrial paint formulations where consistency and shade retention matter.",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80",
+    image: "/spotlight-carousel-2.jpg",
   },
   {
     eyebrow: "Plastics & Rubber",
@@ -485,7 +500,7 @@ function SpotlightCarouselSection() {
     <section className="px-4 py-6 lg:px-6">
       <div className="mx-auto max-w-[1400px]">
         <div className="relative overflow-hidden rounded-[2rem] border border-[#1a3a6b]/12 bg-[#0f2340] shadow-[0_24px_70px_rgba(15,35,64,0.12)]">
-          <div className="relative aspect-[16/6.2] sm:aspect-[16/5.2] lg:aspect-[16/4.4]">
+          <div className="relative aspect-[16/6] md:aspect-[16/5.4]">
             {spotlightSlides.map((slide, index) => (
               <div
                 key={slide.title}
@@ -496,10 +511,10 @@ function SpotlightCarouselSection() {
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="h-full w-full object-cover object-center"
+                  className={`h-full w-full ${slide.imageClass ?? "object-cover object-center"}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0f2340]/92 via-[#0f2340]/76 to-[#0f2340]/28" />
-                <div className="relative flex h-full max-w-3xl flex-col justify-center gap-2 px-5 py-6 sm:px-8 md:px-10 lg:px-12">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0f2340]/88 via-[#0f2340]/68 to-[#0f2340]/22" />
+                <div className="relative flex h-full max-w-3xl flex-col justify-center gap-2 px-5 py-4 sm:px-8 md:px-10 lg:px-12">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-blue-200/80">
                     {slide.eyebrow}
                   </p>
