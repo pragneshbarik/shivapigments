@@ -154,7 +154,7 @@ const aboutSlides = [
   {
     title: "Global Supply Focus",
     subtitle: "Built to support domestic and export customers with prompt response.",
-    image: "https://unsplash.com/photos/_YLzw4aqvIY/download?force=true&w=1400",
+    image: "/about-carousel-2.jpg",
     position: "object-center",
   },
   {
@@ -319,7 +319,7 @@ function AboutSection() {
 
   return (
     <section className="px-4 py-16 lg:px-6">
-      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[minmax(0,1.1fr)_minmax(320px,520px)] lg:items-center">
+      <div className="mx-auto grid max-w-[1400px] gap-10 lg:grid-cols-[minmax(0,1fr)_minmax(360px,620px)] lg:items-center">
         <div className="space-y-5">
           <p
             className="text-sm italic text-[#1a3a6b]/70"
@@ -350,7 +350,7 @@ function AboutSection() {
         </div>
 
         <div className="relative overflow-hidden rounded-[2rem] bg-[#0f2340] shadow-[0_30px_80px_rgba(15,35,64,0.18)]">
-          <div className="relative aspect-[4/4.2] sm:aspect-[4/3.6]">
+          <div className="relative aspect-[4/4.5] sm:aspect-[4/4] lg:aspect-[4/3.55]">
             {aboutSlides.map((slide, index) => (
               <div
                 key={slide.title}
