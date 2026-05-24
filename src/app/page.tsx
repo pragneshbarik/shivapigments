@@ -114,26 +114,11 @@ const applications = [
 
 const spotlightSlides = [
   {
-    eyebrow: "Color Flow Detail",
-    title: "Bold pigment movement in a cleaner wide frame",
-    description:
-      "A sharper rectangular crop that keeps the original texture clear inside the downside carousel.",
-    image: "/spotlight-carousel-4.jpg",
-    imageClass: "object-contain bg-[#0f2340] p-3 sm:p-4",
-  },
-  {
     eyebrow: "Offset & Packaging",
     title: "Strong dispersion for high-speed print runs",
     description:
       "PB grades developed for offset and solvent ink systems that need clean shade and reliable color strength.",
     image: "/product-carousel-1.jpg",
-  },
-  {
-    eyebrow: "Studio Color Work",
-    title: "Smooth pigment blending for creative finishing",
-    description:
-      "A clean, balanced surface for showcasing color mixing, formulation, and finish quality.",
-    image: "/spotlight-carousel-3.jpg",
   },
   {
     eyebrow: "Coatings & Paint",
