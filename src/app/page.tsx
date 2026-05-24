@@ -134,6 +134,14 @@ const spotlightSlides = [
       "Selected grades support plastic and rubber applications that require dependable process stability.",
     image: "https://images.unsplash.com/photo-1580901369227-308f6f40c8ec?auto=format&fit=crop&w=1600&q=80",
   },
+  {
+    eyebrow: "Masterbatch Applications",
+    title: "Color masterbatch production in a clean wide frame",
+    description:
+      "Added as the last slide in the spotlight carousel to showcase downstream application clarity.",
+    image: "/spotlight-carousel-5.jpg",
+    imageClass: "object-contain bg-[#0f2340] p-3 sm:p-4",
+  },
 ]
 
 const whyChooseUs = [
