@@ -118,7 +118,7 @@ const spotlightSlides = [
     title: "Strong dispersion for high-speed print runs",
     description:
       "PB grades developed for offset and solvent ink systems that need clean shade and reliable color strength.",
-    image: "https://images.unsplash.com/photo-1581092160607-ee22731d8a08?auto=format&fit=crop&w=1600&q=80",
+    image: "/product-carousel-1.jpg",
   },
   {
     eyebrow: "Coatings & Paint",
@@ -148,7 +148,7 @@ const aboutSlides = [
   {
     title: "Manufacturing Excellence",
     subtitle: "Reliable pigment production backed by disciplined process control.",
-    image: "https://unsplash.com/photos/BBQ15BncPCc/download?force=true&w=1400",
+    image: "/about-carousel-1.jpg",
     position: "object-center",
   },
   {
@@ -484,8 +484,8 @@ function SpotlightCarouselSection() {
   return (
     <section className="px-4 py-6 lg:px-6">
       <div className="mx-auto max-w-[1400px]">
-        <div className="relative overflow-hidden border border-[#1a3a6b]/12 bg-[#0f2340]">
-          <div className="relative h-[136px] sm:h-[150px] md:h-[164px]">
+        <div className="relative overflow-hidden rounded-[2rem] border border-[#1a3a6b]/12 bg-[#0f2340] shadow-[0_24px_70px_rgba(15,35,64,0.12)]">
+          <div className="relative aspect-[16/6.2] sm:aspect-[16/5.2] lg:aspect-[16/4.4]">
             {spotlightSlides.map((slide, index) => (
               <div
                 key={slide.title}
@@ -496,10 +496,10 @@ function SpotlightCarouselSection() {
                 <img
                   src={slide.image}
                   alt={slide.title}
-                  className="h-full w-full object-cover"
+                  className="h-full w-full object-cover object-center"
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0f2340]/92 via-[#0f2340]/78 to-[#0f2340]/34" />
-                <div className="relative flex h-full max-w-3xl flex-col justify-center gap-1 px-5 py-4 sm:px-6 md:px-8">
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0f2340]/92 via-[#0f2340]/76 to-[#0f2340]/28" />
+                <div className="relative flex h-full max-w-3xl flex-col justify-center gap-2 px-5 py-6 sm:px-8 md:px-10 lg:px-12">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-blue-200/80">
                     {slide.eyebrow}
                   </p>
@@ -517,7 +517,7 @@ function SpotlightCarouselSection() {
             ))}
           </div>
 
-          <div className="absolute bottom-3 right-3 z-10 flex items-center gap-2 bg-white/10 px-2.5 py-1.5 backdrop-blur-md">
+          <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-full bg-white/12 px-3 py-1.5 backdrop-blur-md">
             {spotlightSlides.map((slide, index) => (
               <button
                 key={slide.title}
@@ -525,7 +525,7 @@ function SpotlightCarouselSection() {
                 onClick={() => setActiveSlide(index)}
                 aria-label={`Show spotlight slide ${index + 1}`}
                 className={`h-2 rounded-full transition-all ${
-                  index === activeSlide ? "w-6 bg-white" : "w-2 bg-white/45"
+                  index === activeSlide ? "w-8 bg-white" : "w-2 bg-white/45"
                 }`}
               />
             ))}
