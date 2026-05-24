@@ -122,11 +122,19 @@ const spotlightSlides = [
   },
   {
     eyebrow: "Downstream Applications",
-    title: "Masterbatch production in a clean, balanced frame",
+    title: "Masterbatch production with a strong full-frame view",
     description:
-      "Kept fully visible and centered for a sharper presentation in the downside carousel.",
+      "Zoomed to fit the carousel cleanly while keeping the product scene clear.",
     image: "/spotlight-carousel-5.jpg",
-    imageClass: "object-contain object-center bg-[#0f2340] p-2 sm:p-3 md:p-4",
+    imageClass: "object-cover object-center scale-[1.08]",
+  },
+  {
+    eyebrow: "Masterbatch Line",
+    title: "Downstream color production in a wide industrial frame",
+    description:
+      "Added as the third slide with a cleaner fit and no blue wash over the image.",
+    image: "/spotlight-carousel-6.jpg",
+    imageClass: "object-cover object-center",
   },
 ]
 
@@ -492,8 +500,7 @@ function SpotlightCarouselSection() {
                   alt={slide.title}
                   className={`h-full w-full ${slide.imageClass ?? "object-cover object-center"}`}
                 />
-                <div className="absolute inset-0 bg-gradient-to-r from-[#0f2340]/88 via-[#0f2340]/68 to-[#0f2340]/22" />
-                <div className="relative flex h-full max-w-3xl flex-col justify-center gap-2 px-5 py-4 sm:px-8 md:px-10 lg:px-12">
+                <div className="relative flex h-full max-w-3xl flex-col justify-start gap-2 px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
                   <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-blue-200/80">
                     {slide.eyebrow}
                   </p>
