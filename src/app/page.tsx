@@ -112,6 +112,30 @@ const applications = [
   },
 ]
 
+const spotlightSlides = [
+  {
+    eyebrow: "Offset & Packaging",
+    title: "Strong dispersion for high-speed print runs",
+    description:
+      "PB grades developed for offset and solvent ink systems that need clean shade and reliable color strength.",
+    image: "https://images.unsplash.com/photo-1581092160607-ee22731d8a08?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    eyebrow: "Coatings & Paint",
+    title: "Stable performance across industrial coatings",
+    description:
+      "Built for decorative and industrial paint formulations where consistency and shade retention matter.",
+    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80",
+  },
+  {
+    eyebrow: "Plastics & Rubber",
+    title: "Heat-ready pigments for downstream processing",
+    description:
+      "Selected grades support plastic and rubber applications that require dependable process stability.",
+    image: "https://images.unsplash.com/photo-1580901369227-308f6f40c8ec?auto=format&fit=crop&w=1600&q=80",
+  },
+]
+
 const whyChooseUs = [
   "Three strong group companies with integrated operations",
   "Strict quality control at every stage of production",
@@ -446,6 +470,72 @@ function ProductsSection() {
   )
 }
 
+function SpotlightCarouselSection() {
+  const [activeSlide, setActiveSlide] = useState(0)
+
+  useEffect(() => {
+    const interval = window.setInterval(() => {
+      setActiveSlide((current) => (current + 1) % spotlightSlides.length)
+    }, 3200)
+
+    return () => window.clearInterval(interval)
+  }, [])
+
+  return (
+    <section className="px-4 py-6 lg:px-6">
+      <div className="mx-auto max-w-[1400px]">
+        <div className="relative overflow-hidden border border-[#1a3a6b]/12 bg-[#0f2340]">
+          <div className="relative h-[136px] sm:h-[150px] md:h-[164px]">
+            {spotlightSlides.map((slide, index) => (
+              <div
+                key={slide.title}
+                className={`absolute inset-0 transition-opacity duration-700 ${
+                  index === activeSlide ? "opacity-100" : "opacity-0"
+                }`}
+              >
+                <img
+                  src={slide.image}
+                  alt={slide.title}
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 bg-gradient-to-r from-[#0f2340]/92 via-[#0f2340]/78 to-[#0f2340]/34" />
+                <div className="relative flex h-full max-w-3xl flex-col justify-center gap-1 px-5 py-4 sm:px-6 md:px-8">
+                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-blue-200/80">
+                    {slide.eyebrow}
+                  </p>
+                  <h3
+                    className="max-w-2xl text-lg font-normal leading-tight text-white sm:text-xl md:text-2xl"
+                    style={{ fontFamily: "var(--font-playfair), serif" }}
+                  >
+                    {slide.title}
+                  </h3>
+                  <p className="max-w-2xl text-xs leading-relaxed text-white/70 sm:text-sm md:text-[15px]">
+                    {slide.description}
+                  </p>
+                </div>
+              </div>
+            ))}
+          </div>
+
+          <div className="absolute bottom-3 right-3 z-10 flex items-center gap-2 bg-white/10 px-2.5 py-1.5 backdrop-blur-md">
+            {spotlightSlides.map((slide, index) => (
+              <button
+                key={slide.title}
+                type="button"
+                onClick={() => setActiveSlide(index)}
+                aria-label={`Show spotlight slide ${index + 1}`}
+                className={`h-2 rounded-full transition-all ${
+                  index === activeSlide ? "w-6 bg-white" : "w-2 bg-white/45"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+  )
+}
+
 function ApplicationsSection() {
   return (
     <section>
@@ -616,6 +706,7 @@ export default function Home() {
       <StatsSection />
       <AboutSection />
       <ProductsSection />
+      <SpotlightCarouselSection />
       <ApplicationsSection />
       <WhyChooseSection />
       <CtaSection />
