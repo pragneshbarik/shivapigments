@@ -122,11 +122,11 @@ const spotlightSlides = [
   },
   {
     eyebrow: "Downstream Applications",
-    title: "Masterbatch production with a strong full-frame view",
+    title: "Masterbatch production in a clean, balanced frame",
     description:
-      "Zoomed to fit the carousel cleanly while keeping the product scene clear.",
+      "Kept fully visible and centered for a sharper presentation in the downside carousel.",
     image: "/spotlight-carousel-5.jpg",
-    imageClass: "object-cover object-center scale-[1.08]",
+    imageClass: "object-contain object-center bg-[#0f2340] p-2 sm:p-3 md:p-4",
   },
   {
     eyebrow: "Masterbatch Line",
