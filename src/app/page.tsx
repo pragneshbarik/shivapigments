@@ -112,32 +112,6 @@ const applications = [
   },
 ]
 
-const spotlightSlides = [
-  {
-    eyebrow: "Coatings & Paint",
-    title: "Stable performance across industrial coatings",
-    description:
-      "Built for decorative and industrial paint formulations where consistency and shade retention matter.",
-    image: "https://images.unsplash.com/photo-1517048676732-d65bc937f952?auto=format&fit=crop&w=1600&q=80",
-  },
-  {
-    eyebrow: "Downstream Applications",
-    title: "Masterbatch production in a clean, balanced frame",
-    description:
-      "Kept fully visible and centered for a sharper presentation in the downside carousel.",
-    image: "/spotlight-carousel-5.jpg",
-    imageClass: "object-contain object-center bg-[#0f2340] p-2 sm:p-3 md:p-4",
-  },
-  {
-    eyebrow: "Masterbatch Line",
-    title: "Downstream color production in a wide industrial frame",
-    description:
-      "Added as the third slide with a cleaner fit and no blue wash over the image.",
-    image: "/spotlight-carousel-6.jpg",
-    imageClass: "object-cover object-center",
-  },
-]
-
 const whyChooseUs = [
   "Three strong group companies with integrated operations",
   "Strict quality control at every stage of production",
@@ -472,71 +446,6 @@ function ProductsSection() {
   )
 }
 
-function SpotlightCarouselSection() {
-  const [activeSlide, setActiveSlide] = useState(0)
-
-  useEffect(() => {
-    const interval = window.setInterval(() => {
-      setActiveSlide((current) => (current + 1) % spotlightSlides.length)
-    }, 3200)
-
-    return () => window.clearInterval(interval)
-  }, [])
-
-  return (
-    <section className="px-4 py-6 lg:px-6">
-      <div className="mx-auto max-w-[1400px]">
-        <div className="relative overflow-hidden rounded-[2rem] border border-[#1a3a6b]/12 bg-[#0f2340] shadow-[0_24px_70px_rgba(15,35,64,0.12)]">
-          <div className="relative aspect-[16/6] md:aspect-[16/5.4]">
-            {spotlightSlides.map((slide, index) => (
-              <div
-                key={slide.title}
-                className={`absolute inset-0 transition-opacity duration-700 ${
-                  index === activeSlide ? "opacity-100" : "opacity-0"
-                }`}
-              >
-                <img
-                  src={slide.image}
-                  alt={slide.title}
-                  className={`h-full w-full ${slide.imageClass ?? "object-cover object-center"}`}
-                />
-                <div className="relative flex h-full max-w-3xl flex-col justify-start gap-2 px-5 py-6 sm:px-8 sm:py-8 md:px-10 md:py-10 lg:px-12 lg:py-12">
-                  <p className="text-[11px] font-semibold uppercase tracking-[0.24em] text-blue-200/80">
-                    {slide.eyebrow}
-                  </p>
-                  <h3
-                    className="max-w-2xl text-lg font-normal leading-tight text-white sm:text-xl md:text-2xl"
-                    style={{ fontFamily: "var(--font-playfair), serif" }}
-                  >
-                    {slide.title}
-                  </h3>
-                  <p className="max-w-2xl text-xs leading-relaxed text-white/70 sm:text-sm md:text-[15px]">
-                    {slide.description}
-                  </p>
-                </div>
-              </div>
-            ))}
-          </div>
-
-          <div className="absolute bottom-4 right-4 z-10 flex items-center gap-2 rounded-full bg-white/12 px-3 py-1.5 backdrop-blur-md">
-            {spotlightSlides.map((slide, index) => (
-              <button
-                key={slide.title}
-                type="button"
-                onClick={() => setActiveSlide(index)}
-                aria-label={`Show spotlight slide ${index + 1}`}
-                className={`h-2 rounded-full transition-all ${
-                  index === activeSlide ? "w-8 bg-white" : "w-2 bg-white/45"
-                }`}
-              />
-            ))}
-          </div>
-        </div>
-      </div>
-    </section>
-  )
-}
-
 function ApplicationsSection() {
   return (
     <section>
@@ -707,7 +616,6 @@ export default function Home() {
       <StatsSection />
       <AboutSection />
       <ProductsSection />
-      <SpotlightCarouselSection />
       <ApplicationsSection />
       <WhyChooseSection />
       <CtaSection />
